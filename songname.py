@@ -6,8 +6,9 @@ import urllib.request, json
 
 
 def main():
-    with urllib.request.urlopen(
-            'https://legacy-api.kexp.org/play/?format=json') as url:
+    req = urllib.request.Request(
+        'https://legacy-api.kexp.org/play/?format=json')
+    with urllib.request.urlopen(req) as url:
         data = json.loads(url.read().decode())
         print(data['results'][0]['artist']['name'] + ' - ' +
               data['results'][0]['track']['name'])
