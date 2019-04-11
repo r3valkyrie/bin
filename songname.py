@@ -2,7 +2,7 @@
 
 # Retrieve's current song and artist name from KEXP, the only radio station I really listen to.
 
-import requests, json
+import requests
 
 
 def main():

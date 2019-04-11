@@ -7,7 +7,6 @@
 import pywal, os, subprocess
 def main():
     papedir = os.environ['HOME'] + "/.papes"
-    xresources_include = os.environ['HOME'] + "/.xresources_include"
     wallpaper = pywal.image.get(papedir)
     colors = pywal.colors.get(wallpaper)
 
