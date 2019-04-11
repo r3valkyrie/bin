@@ -7,12 +7,16 @@
 import pywal, os
 def main():
     papedir = os.environ['HOME'] + "/.papes"
+    xresources_include = os.environ['HOME'] + "/.xresources_include"
     wallpaper = pywal.image.get(papedir)
     colors = pywal.colors.get(wallpaper)
 
-    pywal.wallpaper.change(wallpaper)
     pywal.sequences.send(colors)
 
-    pywal.reload.env()
+    pywal.export.every(colors)
 
+    pywal.reload.env()
+    pywal.reload.xrdb()
+
+    pywal.wallpaper.change(wallpaper)
 main()
