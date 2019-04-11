@@ -4,7 +4,7 @@
 #
 # Uses pywal to set a random background and terminal color scheme
 
-import pywal, os, subprocess
+import pywal, os
 def main():
     papedir = os.environ['HOME'] + "/.papes"
     wallpaper = pywal.image.get(papedir)
@@ -19,6 +19,6 @@ def main():
 
     pywal.wallpaper.change(wallpaper)
 
-    subprocess.run(["wal-discord", "-t"])
-    subprocess.run(["wal-steam"])
+    os.system('/usr/local/bin/wal-discord -t')
+    os.system('/usr/local/bin/wal-steam')
 main()
