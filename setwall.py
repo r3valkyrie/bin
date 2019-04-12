@@ -19,6 +19,6 @@ def main():
 
     pywal.wallpaper.change(wallpaper)
 
-    os.system('/usr/local/bin/wal-discord -t')
-    os.system('/usr/local/bin/wal-steam')
+    os.system('/usr/local/bin/wal-discord -t > /dev/null')
+    os.system('/usr/local/bin/wal-steam > /dev/null')
 main()
