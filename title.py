@@ -4,6 +4,6 @@
 
 import sys
 
-title = str(sys.argv[1])
+title = " ".join(sys.argv[1:])
 
 sys.stdout.write("\x1b]2;" + title + "\x07")
