@@ -4,7 +4,10 @@
 #
 # Uses pywal to set a random background and terminal color scheme
 
-import pywal, os
+import pywal
+import os
+import subprocess
+
 def main():
     papedir = os.environ['HOME'] + "/.papes"
     xresources_include = os.environ['HOME'] + "/.xresources_include"
@@ -19,4 +22,8 @@ def main():
     pywal.reload.xrdb()
 
     pywal.wallpaper.change(wallpaper)
+
+    subprocess.call(["/home/valkyrie/.local/bin/obtgen", "--wal"])
+
+
 main()
