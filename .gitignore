@@ -1,0 +1,3 @@
+# Ignore scripts from other rpos
+cryptmnt.py
+convert.py
