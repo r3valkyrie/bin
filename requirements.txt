@@ -1,2 +1,0 @@
-pywal==3.0.0
-wal-steam=1.3.2

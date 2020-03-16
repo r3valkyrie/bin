@@ -1,0 +1,52 @@
+#!/bin/bash
+
+. $HOME/.cache/wal/colors.sh
+cat > $HOME/.config/zathura/zathurarc << EOF
+set recolor "false"
+set font "Meslo LG M 9"
+
+set completion-bg "$background"
+set completion-fg "$foreground"
+set completion-group-bg "$background"
+set completion-group-fg "$color2"
+set completion-highlight-bg "$foreground"
+set completion-highlight-fg "$background"
+
+set recolor-lightcolor "$background"
+set recolor-darkcolor "$foreground"
+set default-bg "$background"
+
+set inputbar-bg "$background"
+set inputbar-fg "$foreground"
+set notification-bg "$background"
+set notification-fg "$foreground"
+set notification-error-bg "$color1"
+set notification-error-fg "$foreground"
+set notification-warning-bg "$color1"
+set notification-warning-fg "$foreground"
+set statusbar-bg "$background"
+set statusbar-fg "$foreground"
+set index-bg "$background"
+set index-fg "$foreground"
+set index-active-bg "$foreground"
+set index-active-fg "$background"
+set render-loading-bg "$background"
+set render-loading-fg "$foreground"
+
+set smooth-scroll true
+set window-title-basename true
+set window-title-page true
+set statusbar-basename true
+set selection-clipboard clipboard
+set guioptions none
+set adjust-open "width"
+set pages-per-row 2
+set smooth-scroll "true"
+set page-padding 0
+
+
+map <C-j> full-down
+map <C-k> full-up
+unmap q
+EOF
+/usr/bin/zathura &
