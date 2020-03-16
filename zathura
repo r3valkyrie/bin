@@ -33,7 +33,6 @@ set index-active-fg "$background"
 set render-loading-bg "$background"
 set render-loading-fg "$foreground"
 
-set smooth-scroll true
 set window-title-basename true
 set window-title-page true
 set statusbar-basename true
@@ -41,12 +40,8 @@ set selection-clipboard clipboard
 set guioptions none
 set adjust-open "width"
 set pages-per-row 2
-set smooth-scroll "true"
 set page-padding 0
 
-
-map <C-j> full-down
-map <C-k> full-up
 unmap q
 EOF
 /usr/bin/zathura &
