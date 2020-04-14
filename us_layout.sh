@@ -1,0 +1,1 @@
+setxkbmap us && xmodmap ~/.xmodmap
